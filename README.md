@@ -34,4 +34,4 @@ To run the Go Myno website:
 
 1. **Follow the link:**
 
-   [websiteLink](URL)
+   [websiteLink](https://club-website-cyan.vercel.app)
