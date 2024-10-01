@@ -1,0 +1,129 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1a1a1a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling */
+.logo img {
+  height: 50px;
+  transition: transform 200ms ease;
+}
+
+.navbar .logo img:hover {
+  transform: scale(1.3);
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding: 5px 0;
+  position: relative;
+}
+
+/* Underline Animation */
+.nav-links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffcc00;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    height: 100vh;
+    width: 200px;
+    background-color: #1a1a1a;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    padding-top: 20px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+
+  .nav-links.active {
+    transform: translateX(0%);
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  /* Hide Links Initially */
+  .nav-links a {
+    font-size: 18px;
+  }
+
+  /* Hamburger Icon */
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Hamburger Animation */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
