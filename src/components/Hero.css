@@ -1,21 +1,18 @@
-/* Hero Section Styles */
 .hero {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 100, 0.7)), url('/public/hero-image.jpg') no-repeat center center/cover;
-  padding: 0 20px;
+  padding:0 20px;
 }
 
-/* Hero Content */
 .hero-content {
   text-align: center;
   color: #fff;
   max-width: 1000px; 
 }
 
-/* Hero Title */
 .hero-title {
   font-size: 3.5rem;
   color: #ffcc00;
@@ -24,7 +21,7 @@
   animation: fadeInUp 1.5s ease-in-out;
 }
 
-/* Hero Subtitle */
+
 .hero-subtitle {
   font-size: 1.8rem;
   color: #87CEEB;
@@ -33,7 +30,6 @@
   animation: fadeInUp 2.5s ease-in-out;
 }
 
-/* Quotes Styling */
 .quote-text {
   font-size: 1.4rem;
   margin-top: 20px;
@@ -47,10 +43,9 @@
 .cursor {
   font-weight: bold;
   color: #fff;
-  animation: blink 0.8s steps(1) infinite;
+  animation: blink 1s steps(1) infinite;
 }
 
-/* Keyframe Animations */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -74,7 +69,6 @@
   }
 }
 
-/* Responsive Design */
 @media screen and (max-width: 1024px) {
   .hero-title {
     font-size: 3rem;
